@@ -1,0 +1,126 @@
+extends base.pug
+
+block title
+    |Learn Programming for Free, Free Programming Videos, Courses & more - ProgrammingWithAAO
+
+block style
+    style
+        include ../static/CSS/body_home.css
+
+block content
+    section#introsection
+        h1#heading
+            | Welcome to ProgrammingWithAAO.com
+
+        h2#sub_head 
+            | Created by Application Aryan Official
+            //- | Created By Aryan Sisodiya
+
+        h3#take
+            | Confused on which programming language to learn first?
+        
+        h3#let
+            | We will let you know
+            
+        h2.browse#browse1
+            | People get answers of most of the Questions like that
+
+        h2.browse#browse2
+            | Browse our free video courses to learn programming from Beginning to Advanced Level
+
+    section#howmuchlang-section
+        h1#howuchlang-heading
+            | How much Programming Languages can a Student Learn from ProgrammingWithAAO.com?
+        p#howmuchlang-para
+            | A student can learn infinite number of Programming Languages and can Master them, Just what we need? Your Attention and Time, no need to pay money, it is free of cost
+        img(src="../static/Img/img5.png" alt="www.programmingwithaao.com" id="howmuchlang-img")
+
+    section#specification
+        h1#specification-section-heading
+            | Our Specifications
+        div#specification-section
+            div.spect-div
+                div.specification-section-div#specification-section-div1
+                    img(src="../static/Img/img1.jpg" id="img1" alt="www.programmingwithaao.com" class="specification-section-img")
+                    h1#specification-section-heading-1.specification-section-heading
+                        | Learn to become an Expert
+                div.specification-section-div#specification-section-div2
+                    img(src="../static/Img/img2.jpg" id="img2" alt="www.programmingwithaao.com" class="specification-section-img")
+                    h1#specification-section-heading-2.specification-section-heading
+                        | Expert Teachers and Excellent Teaching
+
+            div.spect-div
+                div.specification-section-div#specification-section-div3
+                    img(src="../static/Img/img3.jpg" id="img3" alt="www.programmingwithaao.com" class="specification-section-img")
+                    h1#specification-section-heading-3.specification-section-heading   
+                        | Coding Perfection
+                div.specification-section-div#specification-section-div4
+                    img(src="../static/Img/img4.jpg" id="img4" alt="www.programmingwithaao.com" class="specification-section-img")
+                    h1#specification-section-heading-4.specification-section-heading   
+                        | Every Question has an Answer and More..
+
+    section#whytotakesection
+        div#content-whytotakesection
+            div#contentdiv1.contentdiv
+                div#cont-1.div-whytotakesection
+                    h2.heading-whytotakesection
+                        | Why to Choose ProgrammingWithAAO.com?
+                    
+                    p.para-whytotakesection
+                        | ProgrammingWithAAO.com is a free coding website that can make you a Programming Expert. You have to just enroll the Student
+                div#cont-2.div-whytotakesection
+                    h2.heading-whytotakesection
+                        | What are the Special features of ProgrammingWithAAO.com?
+                    
+                    p.para-whytotakesection
+                        | Expert teaching, Excellent Teachers, Coding Perfection and doubt classes can be done and more, are of the special features of ProgrammingWithAAO.com.
+            div#contentdiv2.contentdiv
+                div#cont-3.div-whytotakesection.contentdiv2
+                    h2.heading-whytotakesection
+                        | Can I trust on ProgrammingWithAAO.com?
+                    
+                    p.para-whytotakesection
+                        | ProgrammingWithAAO.com is a fully trustable website. You can realise the imrovement on the Coding Skills of Student when he/she will make awesome designs of Web Applications/ WebSites/ Android Applications/ Dekstop Applications/ more.
+                div#cont-4.div-whytotakesection.contentdiv2
+                    h2.heading-whytotakesection
+                        | How is ProgrammingWithAAO.com different from other coding Websites?
+                    
+                    p.para-whytotakesection
+                        | ProgrammingWithAAO.com is different as all the content of this website is Free and All the video courses contains relevant information. All the courses are complete.
+
+    section#sponsers-section
+        h1#heading-sponsers-section
+            | Our Sponsers
+        img(src="../static/Img/logo1.png", alt="", id="logo1" class="logos")
+        img(src="../static/Img/logo2.png", alt="", id="logo2" class="logos")
+        img(src="../static/Img/logo3.png", alt="", id="logo3" class="logos")
+        img(src="../static/Img/logo4.png", alt="", id="logo4" class="logos")
+
+    section#buttons
+        div#code.button-div
+            img(src="../static/Img/coding.jpg", alt="www.programingwithaao.com" class="button-img")
+            h1.code-heading
+                | Browse Videos
+            p.code-para
+                | Get your programming career started with these free video courses. All videos are available for many types of programming languages
+            a(href="/courses" id="button-btn1" class="button-btn")
+                | Browse Video Courses
+        div#enroll.button-div
+            img(src="../static/Img/enroll.png", alt="www.programingwithaao.com" class="button-img")
+            h1.code-heading
+                | Enroll Student Now!
+            p.code-para
+                | Enroll the Student now to see free videos courses. Enrollment is completely free, no money is required to enroll 
+            a(href="/enroll" id="button-btn2" class="button-btn")
+                | Enroll Now!
+        div#contact-us.button-div
+            img(src="../static/Img/python.png", alt="www.programingwithaao.com" class="button-img")
+            h1.code-heading
+                | Contact Us
+            p.code-para
+                | Learn programming from our free courses. Examples are available with these tutorials. You can contact us any time for any doubt and We will get back to you!
+            a(href="/contact" id="button-btn3" class="button-btn")
+                | Contact Us
+
+block js 
+    

@@ -1,0 +1,135 @@
+body{
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+body::before{
+    content: "";
+    background: url(bg.jpg) no-repeat center center/cover;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+h1{
+    color: #fbfbfb;
+    font-weight: bold;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.both{
+    display: inline-block;
+    background-color: crimson;
+    text-decoration: none;
+    border-radius: 9px;
+    width: 193px;
+    height: 26px;
+    padding: 15px 30px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    text-align: center;
+    margin: 40px 23px;
+}
+
+a:hover{
+    background-color: #be1737;
+    color: #adadad;
+}
+
+a:active{
+    color: red;
+    background-color: blue;
+}
+
+#log{
+    position: absolute;
+    margin: -17px 13px;
+    width: 110px;
+    height: 103px;
+    top: 39px;
+    right: 17px;
+}
+
+h3{
+    display: inline;
+    margin-left: 20px;
+}
+
+.form_rate input{
+    display: block;
+    margin: 25px 20px;
+    padding: 8px;
+    width: 95%;
+    font-size: 18px;
+    font-family: 'Merriweather', serif;
+}
+
+.form_rate input[type="reset"]{
+    display: inline-block;
+    position: absolute;
+    top: 200px;
+    left: 980px;
+    width: 258px;
+    border-radius: 8px;
+    background-color: darkblue;
+    color: darkcyan;
+    font-size: 22px;
+    font-weight: bold;  
+}
+
+.form_rate input[type="reset"]:hover{
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}
+
+.form_rate input[type="reset"]:active{
+   background-color: rgb(0, 110, 255);
+}
+
+.rate{
+    width: 860px;
+    top: 210px;
+    position: absolute;
+    
+}
+
+#message{
+    display: block;
+    margin: 25px 20px;
+    padding: 8px;
+    width: 95%;
+    font-size: 18px;
+    font-family: 'Merriweather', serif;
+}
+
+#submit{
+    display: inline-block;
+    font-family: 'Merriweather', serif;
+    position: absolute;
+    top: 113px;
+    left: 992px;
+    width: 258px;
+    border-radius: 8px;
+    background-color: darkblue;
+    color: darkcyan;
+    font-size: 22px;    
+    padding: 8px;
+    text-decoration: none;
+    text-align: center;
+}
+
+#submit:hover{
+    cursor: pointer;
+    background-color: blue;
+    color: white;
+}
+
+#submit:active{
+    background-color: rgb(0, 110, 255);
+ }

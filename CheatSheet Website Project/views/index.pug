@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../static/img/favicon1.ico" type="image/x-icon">
+    style 
+        include ../CSS/body_style.css
+        include ../CSS/navigation bar.css
+        include ../prism.js/prism.css
+        include ../CSS/responsive-design.css
+
+    script 
+        include prism.js/prism.js
+    <title>HTML CheatSheet By Application Aryan Official</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <ul id="nav_list">
+                <li class="nav_link" id="nav_link-0">
+                    img(src="../static/Img/logo_circle.ico" alt="Application Aryan Official" id="logo")
+                </li>
+                <li class="nav_link" id="nav_link-1"><a href="#" class="link_a">Home</a></li>
+                <li class="nav_link" id="nav_link-2"><a href="#services" class="link_a">Services</a></li>
+                <li class="nav_link" id="nav_link-3"><a href="#contact" class="link_a">Contact Us</a></li>
+                <li class="nav_link" id="nav_link-4"><a href="#totop" class="link_a">About Us</a></li>
+                <div id="search-box_div">
+                    
+                    //- <li id="search-icon-list"><a href=""><img src="../static/Img/search.png" alt="load" id="search-icon"></a></li>
+                    <li id="searchbox">
+                        <form action="">
+                            <input type="search" id="search" placeholder="Type Here To search">
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="heading-box">
+        //- <h1 id="heading">Welcome to Application Aryan Official</h1>
+        <h1 id="heading">This Website has been created by Aryan sisodiya</h1>
+    </div>
+    <button id="toggle-hide">Show/Hide</button>
+    <div class="container">
+        <ol>
+            
+            <div class="margin_bot">
+                <li><b> The HTML Boiler Plate is:</b>
+                    <p> This is the basic HTML boiler plate code:</p>
+                    <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+| &lt;html lang="en"&gt;
+| &lt;head&gt;
+| &lt;meta charset="UTF-8"&gt;
+| &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+| &lt;title&gt;Document&lt;/title&gt;
+| &lt;/head&gt;
+| &lt;body&gt;
+
+| &lt;/body&gt;
+| &lt;/html&gt;</code></pre>
+</li>
+                <hr>
+</div>
+            
+            <div class="margin_bot">
+                <li><b> This is how we can link or apply CSS in our HTML file:</b>
+                    <p> The CSS can be  applied in our HTML file (Markup) by the following methods:</p>
+                    <ul>
+                        <li class="list"><b>Inline CSS</b>, In Inline CSS we have to write a 'style' Attribute in HTML tag in which we want to define CSS. <b>For example,</b>
+                            <pre class="language-html"><code>&lt;h1 style="color:blue;"&gt;A Blue Heading&lt;/h1&gt;
+| &lt;p style="color:red;"&gt;A red paragraph.&lt;/p&gt;</code></pre>
+</li>
+                        <li class="list"><b>Internal CSS</b>, In Internal CSS, We will write a 'style' tags in the head tag, and then we will define our CSS in between the tags, we can target our selectors by using the ids and classes assigned to Selectors. <b>For example,</b>
+                        <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+| &lt;html lang="en"&gt;
+| &lt;head&gt;
+| &lt;meta charset="UTF-8"&gt;
+| &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+| &lt;title&gt;Example of Internal CSS&lt;/title&gt;
+| &lt;style&gt;
+|    #heading{
+|        color: blue;
+|     }
+
+|    .para{
+|        color: red;
+|    }
+
+|    &lt;/style&gt;
+| &lt;/head&gt;
+| &lt;body&gt;
+|     &lt;h1 id="heading"&gt;This is a Blue Heading&lt;/h1&gt;
+|    &lt;p class="para"&gt;This is a Red paragraph.&lt;/p&gt;
+| &lt;/body&gt;
+| &lt;/html&gt;</code></pre></li>
+<li class="list"><b>External CSS</b>, In External CSS we will make an external file with the extension '.css' say, help.css. Then we will define our CSS there. <b>But in External CSS we have to link the css file by using the following syntax,</b><pre class="language-html"><code>&lt;!-- The name of file is style.css so we have to write the href="(name of file).css" --&gt;
+| &lt;link rel="stylesheet" href="help.css"&gt;</code></pre>An example of External CSS is given below, 
+<p>This is the HTML file</p><pre class="language-html"><code>&lt;!-- Create a css file say, help.css --&gt;
+| &lt;!DOCTYPE html&gt;
+| &lt;html lang="en"&gt;
+| &lt;head&gt;
+|     &lt;meta charset="UTF-8"&gt;
+|     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+|     &lt;link rel="stylesheet" href="help.css"&gt; &lt;!-- Linking the CSS file --&gt;
+|     &lt;title&gt;External CSS&lt;/title&gt;
+| &lt;/head&gt;
+| &lt;body&gt;
+|     &lt;h1 id="heading"&gt;This is a blue Heading&lt;/h1&gt;
+|     &lt;p class="para"&gt;This is a red Paragraph&lt;/p&gt;
+| &lt;/body&gt;
+| &lt;/html&gt;</code></pre>
+<p>This is the CSS file (help.css)</p><pre class="language-css"><code>/* This is the help.css file */
+| #heading{
+|     color: blue;
+| }
+
+| .para{
+|     color: red;
+| }</code></pre>
+</li>
+                    </ul>
+</li>
+                <hr>
+| </div>
+            
+<div class="margin_bot">
+                <li><b>The following code is of a Navigation Menu that I've created:</b>
+                    <p> This is the HTML file, you can scroll on horizontal scroll bar:</p>
+                    <pre class="language-html"><code>&lt;!-- This is the main HTML file (index.html) --&gt;
+| &lt;!DOCTYPE html&gt;
+| &lt;html lang="en"&gt;
+
+| &lt;head&gt;
+|     &lt;meta charset="UTF-8"&gt;
+|     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+|     &lt;link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet"&gt;
+|     &lt;link rel="stylesheet" href="style.css"&gt;
+|     &lt;title&gt;Navigation&lt;/title&gt;
+| &lt;/head&gt;
+
+| &lt;body&gt;
+|     &lt;nav id="navbar"&gt;
+|         &lt;ul id="nav_list"&gt;
+|             &lt;li class="nav_link" id="nav_link-0"&gt;&lt;img src="logo_circle.ico" alt="Welcome to Application Aryan Official" id="logo"&gt;&lt;/li&gt; &lt;!-- You can Use Any other better image for logo--&gt;
+|             &lt;li class="nav_link" id="nav_link-1"&gt;&lt;a href="navigation tutorial.html" class="link_a"&gt;Home&lt;/a&gt;&lt;/li&gt;
+|             &lt;li class="nav_link" id="nav_link-2"&gt;&lt;a href="#" class="link_a"&gt;Servies&lt;/a&gt;&lt;/li&gt;
+|             &lt;li class="nav_link" id="nav_link-3"&gt;&lt;a href="#contact" class="link_a"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+|             &lt;li class="nav_link" id="nav_link-4"&gt;&lt;a href="#about" class="link_a"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+|             &lt;div id="search-box_div"&gt;
+
+|                 &lt;li id="search-icon-list"&gt;&lt;a href=""&gt;&lt;img src="search.png" alt="search" id="search-icon"&gt;&lt;/a&gt;&lt;/li&gt;
+|                 &lt;li id="searchbox"&gt;
+|                     &lt;form action=""&gt;
+|                         &lt;input type="text" id="search" placeholder="Type Here To search"&gt;
+|                     &lt;/form&gt;
+|                 &lt;/div&gt;
+|             &lt;/li&gt;
+|         &lt;/ul&gt;
+|     &lt;/nav&gt;
+| &lt;/body&gt;
+
+| &lt;/html&gt;</code></pre>
+<p>The following file is the CSS file (style.css)</p><pre class="language-css"><code>/* This is the CSS file (style.css) */
+| * {
+|     margin: 0;
+|     padding: 0;
+| }
+
+| #nav_list {
+|     display: flex;
+|     padding: 7px 12px;
+|     align-items: center;
+|     padding-left: 0;
+| }
+
+| .nav_link {
+|     list-style: none;
+|     padding: 0px 9px;
+| }
+
+| .nav_link a {
+|     display: flex;
+|     text-decoration: none;
+|     color: red;
+|     font-size: 20px;
+|    padding: 10px;
+|     align-items: center;
+| }
+
+| #navbar::before {
+|     content: "";
+|     background-color: #343a40 !important;
+|     height: 100%;
+|     width: 100%;
+|     top: 0;
+|     left: 0;
+|     z-index: -1;
+|     position: absolute;
+| }
+
+| header{
+|     position: sticky;
+|     z-index: 10;
+|     top: 0px;
+|     left: 0px;
+| }
+
+| #navbar {
+|     height: 100%;
+|     font-family: 'Bree Serif', serif;
+| }
+
+| .link_a:hover {
+|     background-color: white;
+|     border-radius: 4px;
+|     color: green;
+|     font-weight: bold;
+| }
+
+| .link_a:active {
+|     background-color: rgb(0, 89, 255);
+|     color: yellowgreen;
+| }
+
+| #searchbox {
+|     display: flex;
+|     justify-content: center;
+|     align-items: center;
+|     height: 50px;
+| }
+
+| #search {
+|     padding: 6px;
+|     font-size: 18px;
+|     font-family: 'Bree Serif', serif;
+|     width: 300px;
+|     background-color: transparent;
+|     border: 2px solid palegreen;
+|     border-radius: 5px;
+|     color: white;
+| }
+
+| #search::placeholder {
+|     font-family: 'Bree Serif', serif;
+|     color: wheat;
+| }
+
+| #search-icon-list {
+|     height: 212px;
+| }
+
+| #search-icon {
+|     position: absolute;
+|     top: 3px;
+|    background-color: white;
+|    border-radius: 5px;
+|    height: 39px;
+|     list-style: none;
+|     padding: 2px;
+| }
+
+| #search-icon:hover{
+|     background-color: #e9e4db;
+| }
+
+| #search-icon:active{
+|     background-color: #beb8aa;
+| }
+
+| #search-icon-list{
+|     list-style: none;
+|     height: 43px;
+|     padding-left: 10px;
+|     width: 43px;
+| }
+
+| #search-box_div{
+|    display: flex;
+|     position: absolute;
+|     top: 5px;
+|     right: 15px;
+|     flex-direction: row-reverse;
+| }
+
+| #logo{
+|     border-radius: 45px;
+|     height: 40px;
+|     border: 2px solid #bbadad;
+| }
+
+| #nav_link-0{
+|     padding-right: 0;
+| }</code></pre>
+</li>
+                <hr>
+</div>
+            
+            <div class="margin_bot">
+                <li><b>This is the second type of Navigation Bar that I've created using Old Techinque (Floats and Clears):</b>
+<pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+| &lt;html lang="en"&gt;
+
+| &lt;head&gt;
+|     &lt;meta charset="UTF-8"&gt;
+|     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+|     &lt;title&gt;Navigation&lt;/title&gt;
+|     &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+|     &lt;link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"&gt;
+|     &lt;style&gt;
+|         body{
+|             font-family: 'Ubuntu', sans-serif;
+|         }
+| 
+|         .navbar {
+|             background-color: rgb(120, 13, 13, 96%);
+|             border-radius: 15px;
+|            
+|         }
+
+|         .navbar li {
+|             float: left;
+|             list-style: none;
+|             margin: 13px 29px;
+|        }
+
+|         .navbar ul {
+|             overflow: auto;
+|         }
+
+|        .navbar li a {
+|            text-decoration: none;
+|             color: white;
+|        }
+
+|         .search {
+|             float: right;
+|             color: white;
+|             margin: 13px 44px;
+|             /* border-radius: 12px; */
+|         }
+
+|        .nabar input {
+|            border: 2px solid rgb(100, 212, 7);
+|           border-radius: 4px;
+|            /* margin: 13px 13px; */
+|            padding: 1px 19px;
+|        }
+
+|       .navbar a:hover,
+|       a:active {
+|           color: rgb(14, 46, 223);
+|       }
+
+|       header{
+|           position: sticky;
+|           z-index: 10;
+|           top: 1em;
+|           left: 0px;
+|       }
+|     &lt;/style&gt;
+| &lt;/head&gt;
+
+| &lt;body&gt;
+|     &lt;header&gt;
+|         &lt;nav class="navbar"&gt;
+|            &lt;ul&gt;
+|  &lt;li&gt;&lt;a href="https://www.google.com/" target="_blank"&gt;Google&lt;/a&gt; &lt;/li&gt;
+|  &lt;li&gt;&lt;a href="https://www.facebook.com/" target="_blank"&gt;Facebook&lt;/a&gt; &lt;/li&gt;
+|  &lt;li&gt;&lt;a href="https://www.instagram.com/" target="_blank"&gt;Instagram&lt;/a&gt; &lt;/li&gt;
+|  &lt;li&gt;&lt;a href="https://twitter.com/?lang=en" target="_blank"&gt;Twitter&lt;/a&gt;&lt;/li&gt;
+|  &lt;div class="search"&gt;
+|      &lt;input type="text" name="search" id="search" placeholder="Search here Anything"&gt;
+|  &lt;/div&gt;
+| &lt;/ul&gt;
+| &lt;/nav&gt;
+|  &lt;/header&gt;
+|  &lt;!-- This text is to just Check whether my Navigation Bar is Stick to the top or not --&gt;
+|  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+| &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|   &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+|  &lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex, quasi.&lt;/p&gt;
+
+| &lt;/body&gt;
+
+| &lt;/html&gt;</code></pre>
+</li>
+                <hr>
+</div>
+            
+            <div class="margin_bot">
+                <li><b> The code of the Audio and Video Website that I've created is as followes:</b>
+                    <p> This is the HTML file's code:</p>
+                    <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+| &lt;html lang="en"&gt;
+
+| &lt;head&gt;
+|     &lt;meta charset="UTF-8"&gt;
+|     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+|     &lt;title&gt;Application Aryan Official&lt;/title&gt;
+|     &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+|     &lt;link rel="preconnect" href="https://fonts.gstatic.com"&gt;
+|     &lt;link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"&gt;
+|     &lt;link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"&gt;
+|    &lt;link rel="stylesheet" href="mainpage.css"&gt;
+| &lt;/head&gt;
+
+| &lt;body&gt;
+|    &lt;h1&gt;Hi, Welcome to Application Aryan Official&lt;/h1&gt;&lt;br&gt;
+|    &lt;h3&gt;Please select what you want to do:&lt;/h3&gt;&lt;br&gt;
+|    &lt;a href="audios.html" class="both" id="aud"&gt;Listen Audio&lt;/a&gt;
+|    &lt;a href="videos.html" class="both" id="vid"&gt;See some videos&lt;/a&gt;
+|    &lt;img src="logo.ico" alt="Your Browser doesn't support this image type" id="log"&gt;
+|    &lt;div class="rate"&gt;
+|        &lt;form action="" class="form_rate"&gt;
+|           &lt;input type="text" name="name" id="name" placeholder="Write your name here."&gt;
+|           &lt;input type="number" name="no_of_rate" id="rate"
+|               placeholder="How much stars do you want give us? Write it here?"&gt;
+|           &lt;textarea name="howfeel?" id="message" cols="30" rows="10" placeholder="Write how you felt 
+|           after visiting this website?"&gt;&lt;/textarea&gt;
+|           &lt;input type="reset" value="Reset"&gt;
+|           &lt;a href="submit.html" id="submit"&gt;Submit&lt;/a&gt;
+
+|       &lt;/form&gt;
+|   &lt;/div&gt;
+
+| &lt;/body&gt;
+| &lt;script src="mainpage.js"&gt;&lt;/script&gt;
+| 
+| &lt;/html&gt;</code></pre>
+<p>This is the CSS file's code</p>
+<pre class="language-css"><code>body{
+|     font-family: 'Ubuntu', sans-serif;
+|     font-weight: bold;
+| }
+
+| body::before{
+|     content: "";
+|    background: url(bg.jpg) no-repeat center center/cover;
+|    position: absolute;
+|    top:0;
+|    left: 0;
+|    width: 100%;
+|    height: 100%;
+|    z-index: -1;
+|    opacity: 0.9;
+| }
+
+| h1{
+|     color: #fbfbfb;
+|     font-weight: bold;
+|    margin-left: 20px;
+|     display: inline-block;
+| }
+
+| .both{
+|     display: inline-block;
+|     background-color: crimson;
+|     text-decoration: none;
+|    border-radius: 9px;
+|    width: 193px;
+|    height: 26px;
+|    padding: 15px 30px;
+|    font-family: 'Ubuntu', sans-serif;
+|    font-size: 20px;
+|    text-align: center;
+|     margin: 40px 23px;
+| }
+
+| a:hover{
+|     background-color: #be1737;
+|     color: #adadad;
+| }
+
+| a:active{
+|     color: red;
+|     background-color: blue;
+| }
+
+| #log{
+|     position: absolute;
+|     margin: -17px 13px;|    width: 110px;
+|     height: 103px;
+|     top: 39px;
+|     right: 17px;
+| }
+
+| h3{
+|     display: inline;
+|     margin-left: 20px;
+| }
+
+| .form_rate input{
+|     display: block;
+|     margin: 25px 20px;
+|     padding: 8px;
+|     width: 95%;
+|    font-size: 18px;
+|     font-family: 'Merriweather', serif;
+| }
+
+| .form_rate input[type="reset"]{
+|     display: inline-block;
+|     position: absolute;
+|     top: 200px;
+|     left: 980px;
+|     width: 258px;
+|     border-radius: 8px;
+|    background-color: darkblue;
+|    color: darkcyan;
+|    font-size: 22px;
+|    font-weight: bold;  
+| }
+
+| .form_rate input[type="reset"]:hover{
+|     cursor: pointer;
+|     background-color: blue;
+|    color: white;
+| }
+
+| .form_rate input[type="reset"]:active{
+|    background-color: rgb(0, 110, 255);
+| }
+
+| .rate{
+|     width: 860px;
+|     top: 210px;
+|     position: absolute;
+|     
+| }
+
+| #message{
+|     display: block;
+|     margin: 25px 20px;
+|     padding: 8px;
+|     width: 95%;
+|     font-size: 18px;
+|     font-family: 'Merriweather', serif;
+| }
+
+| #submit{
+|     display: inline-block;
+|     font-family: 'Merriweather', serif;
+|     position: absolute;
+|     top: 113px;
+|     left: 992px;
+|     width: 258px;
+|     border-radius: 8px;
+|     background-color: darkblue;
+|     color: darkcyan;
+|     font-size: 22px;    
+|     padding: 8px;
+|    text-decoration: none;
+|     text-align: center;
+| }
+
+| #submit:hover{
+|     cursor: pointer;
+|     background-color: blue;
+|     color: white;
+| }
+
+| #submit:active{
+|     background-color: rgb(0, 110, 255);
+|  }</code></pre>
+</li>
+                <hr>
+</div>
+        </ol>
+</div>
+    <div id="contact">
+        <h2 id="contact-head">Contact Us</h2>
+        <form action="#" class="contact" method="POST">
+            <input type="text" id="name" name="name" placeholder="Enter Your Name">
+            <input type="number" id="contact_no1" name="contact_no1" placeholder="Write Your Contact No. 1">
+            <input type="number" id="contact_no2" name="contact_no2" placeholder="Write Your Contact No. 2">
+            <textarea name="help" id="help" cols="30" rows="10" placeholder="How do we help you?"></textarea>
+            <textarea name="Issue" id="isse" cols="30" rows="10" placeholder="Write your Issue/ Why do you want to Contact us?/ Problem"></textarea>
+            <input type="email" id="email" name="email" placeholder="Write Your email">
+            <input type="submit" id="submit" placeholder="Submit">
+            <input type="reset" id="reset" placeholder="Reset">
+        </form>
+    </div>
+    <footer>
+       | &copy; 2021-2022 aryansisodiya.com | All Rights Reserved 
+    //-    | &copy; 2021-2022 applicationaryanofficial.com | All Rights Reserved 
+<a href="#" id="totop">Back to Top</a>
+    </footer>
+
+script 
+    include script.js
+</body>
+
+</html>

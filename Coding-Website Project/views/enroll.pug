@@ -1,0 +1,23 @@
+extends base.pug
+
+block title
+    | Enroll - ProgrammingWithAAO.com
+
+block style
+    style
+        include ../Static/CSS/enroll.css
+
+block content
+    <div id="enroll">
+            <h2 id="enroll-head">Enroll Student</h2>
+            <form action="/enroll" class="enroll" method="POST">
+                <input type="text" id="student_name" name="Student" placeholder="Enter Student's Name">
+                <input type="number" id="contact_no1" name="contact_no1" placeholder="Write Your Contact No. 1 (with Country Code)">
+                <input type="number" id="contact_no2" name="contact_no2" placeholder="Write Your Contact No. 2 (with Country Code)">
+                <input type="email" id="student_email" name="Student_email" placeholder="Write Student's/ Parent's email">
+                <input type="text" id="mother_name" name="mother_name" placeholder="Write Student's mother's name">
+                <input type="text" id="father_name" name="father_name" placeholder="Write Student's father's name">
+                <input type="submit" id="submit_btn" placeholder="Submit">
+                <input type="reset" id="reset_btn" placeholder="Reset">
+            </form>
+    </div>

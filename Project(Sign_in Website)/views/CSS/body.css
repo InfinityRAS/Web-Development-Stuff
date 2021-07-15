@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Average&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+input::placeholder,
+textarea::placeholder {
+  font-family: "Roboto Slab", serif !important;
+  /* font-family: 'Average', serif !important; */
+}
+
+input,
+textarea {
+  font-family: "Roboto Slab", serif !important;
+  outline: none;
+  /* font-family: 'Average', serif !important; */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#heading {
+  font-size: 70px;
+  font-weight: bolder;
+  color: #0a1748;
+  font-family: "Roboto Slab", serif;
+  border-bottom: 3px solid;
+}
+
+.headings {
+  text-align: center;
+  /* width: 1333px; */
+  margin: auto;
+}
+
+#sub_head {
+  font-size: 50px;
+  color: #1c149e;
+  font-family: "Roboto Slab", serif;
+  border-bottom: 2px solid;
+}
+
+#signin {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  height: 446px;
+}
+
+.form_items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form_items input {
+  margin: 12px 12px;
+  padding: 12px 12px;
+  font-size: 20px;
+  width: 800px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 2px solid black;
+  color: black;
+  font-weight: bolder;
+  font-family: "Average", serif;
+}
+
+.form_items input::placeholder {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  opacity: 90;
+  font-size: 20px;
+}
+
+.sub_res {
+  display: inline-block;
+}
+
+#submit {
+  text-decoration: none;
+  width: 145px;
+}
+
+#reset {
+  width: 145px;
+  margin: 12px 174px;
+}
+
+#reset:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+#reset:active {
+  background-color: blue;
+  color: red;
+}
+
+#submit {
+  text-decoration: none;
+  width: 145px;
+}
+
+#submit:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+#submit:active {
+  background-color: blue;
+  color: red;
+}
+
+#contact {
+  background-color: #e4e8ec;
+}
+
+.contact {
+  margin: auto;
+  width: 70vw;
+  /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+  align-items: center;
+}
+
+.contact input,
+textarea {
+  font-family: "Roboto Slab", serif;
+  font-weight: bolder;
+  display: inline-block;
+  width: 97%;
+  padding: 5px 13px;
+  font-size: 19px;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 4px;
+  margin: 7px 0px;
+}
+
+.contact textarea {
+  display: inline-block;
+  /* width: 50%; */
+  /* width: 446px; */
+  width: 46%;
+}
+
+#contact-head {
+  text-align: center;
+  font-size: 5rem;
+  font-family: "Roboto Slab", serif;
+  /* padding: 0px 0; */
+  color: #1b5f80;
+}
+
+#reset_btn {
+  /* width: 46px; */
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+}
+
+#reset_btn:hover {
+  color: black;
+  background-color: #bbc7b8;
+}
+#reset_btn:active {
+  color: red;
+  background-color: blue;
+}
+
+#submit_btn {
+  /* width: 46px; */
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+}
+
+#submit_btn:hover {
+  color: black;
+  background-color: #bbc7b8;
+}
+#submit_btn:active {
+  color: red;
+  background-color: blue;
+}
+
+.contact input[type="submit"] {
+  width: 476px;
+}
+
+.contact input[type="reset"] {
+  width: 476px;
+}
+
+footer {
+  background-color: #343a40;
+  /* height: 20vh; */
+  padding: 23px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #f8f9fa !important;
+  font-size: 1rem;
+  font-family: "Roboto Slab", serif;
+}
+
+#about {
+  color: #b5c7da;
+  text-decoration: none;
+}
+
+#about:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+#about:active {
+  /* text-decoration: underline; */
+  color: red;
+}

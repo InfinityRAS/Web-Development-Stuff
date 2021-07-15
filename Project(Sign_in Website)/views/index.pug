@@ -1,0 +1,69 @@
+doctype html
+html
+    head 
+        title
+            | Sign In
+        style 
+            include CSS/navigation.css
+            include CSS/body.css 
+        <link rel="shortcut icon" href="../static/Img/favicon1.ico" type="image/ico">
+    
+    body 
+        header
+            nav#navbar 
+                ul#nav_list 
+                    img(id="logo" src="../static/Img/logo_circle.ico")
+                    li#list_item-1.list_items 
+                        a(id="list_link-1" href="#" class="list_links")
+                            | Home
+                    li#list_item-2.list_items 
+                        a(id="list_link-2" href="#services" class="list_links")
+                            | Services
+                    li#list_item-3.list_items 
+                        a(id="list_link-3" href="#contact" class="list_links")
+                            | Contact Us
+                    li#list_item-4.list_items
+                        a(id="list_link-4" href="#about" class="list_links")
+                            | About Us
+                    div#search-box_div
+                        li#searchbox
+                            form 
+                                input(type="search" id="search" placeholder="Type here to Search")
+
+        div.headings
+            <h1 id="heading">Welcome to Application Aryan Official</h1>  
+            //- <h1 id="heading">This Website has been Created by Aryan Sisodiya</h1>  
+            <h2 id="sub_head">Please Sign In</h2>     
+
+        div#signin 
+            form(class="signin_form" method="POST" action="/contact/submit")
+                div(class="form_items")
+                    label(for="email")
+                    input(type="email" name="email" id="email" placeholder="Enter Your Aryan Id")
+                div.form_items
+                    label(for="pass")
+                    input(type="password" name="password" id="pass" placeholder="Enter your password")
+                div.form_items.sub_res
+                    input(type="reset" name="reset" id="reset")
+                div.form_items.sub_res
+                    input(type="submit" name="submit" id="submit")
+
+        <div id="contact">
+            <h2 id="contact-head">Contact Us</h2>
+            <form action="/contact" class="contact" method="POST">
+                <input type="text" id="client-name" name="Client_name" placeholder="Enter Your Name">
+                <input type="number" id="contact_no1" name="contact_no1" placeholder="Write Your Contact No. 1">
+                <input type="number" id="contact_no2" name="contact_no2" placeholder="Write Your Contact No. 2">
+                <textarea name="help" id="help" cols="30" rows="10" placeholder="How do we help You?"></textarea>
+                <textarea name="Issue" id="isse" cols="30" rows="10" placeholder="Write your Issue/ Why do you want to Contact us?/ Problem"></textarea>
+                <input type="email" id="client-email" name="client_email" placeholder="Write Your email">
+                <input type="submit" id="submit_btn" placeholder="Submit">
+                <input type="reset" id="reset_btn" placeholder="Reset">
+            </form>
+        </div>
+
+        footer
+            //- | &copy; 2021-2022 applicationaryanofficial.com | All Rights Reserved 
+            | &copy; 2021-2022 aryansisodiya.com | All Rights Reserved 
+            a(href="#" id="about")
+                    | Back to Top
