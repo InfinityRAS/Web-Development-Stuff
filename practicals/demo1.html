@@ -5,8 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            height: 0px;
+            background: red;
+            width: 75%;
+            transition: all 0.5s ease-in-out;
+            display: none;
+        }
+        
+        .max-height {
+            height: 500px;
+            background: blue;
+        }
+    </style>
 </head>
 <body>
-    <!-- i'll gonna do some regular exp tests in this file (js) -->
+    <input type="number" placeholder="Enter the time in seconds" id="time">
+    <button id="btn" >Start</button>
+    <div class="container"></div>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", start)
+        
+        function start() {
+            let time = document.getElementById("time").value; 
+            let refinedTime = time * 1000;
+            Array.from(document.getElementsByClassName("container"))[0].style.display = "block";
+            setInterval(() => {
+                Array.from(document.getElementsByClassName("container")[0].classList.toggle("max-height"));
+            }, refinedTime);
+        }
+    </script>
 </body>
 </html>

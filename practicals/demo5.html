@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover effect</title>
+    <style>
+        .btn {
+            font-size: 40px;
+            font-family: -webkit-pictograph;
+            background: transparent;
+            outline: none;
+            border: 2px solid #564d4dd1;
+            border-radius: 4px;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+        }
+
+        .effect {
+            background-color: red;
+        }
+
+        div[name="special div"] {
+            margin-top: 5px;
+            height: 87vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #changeHere {
+            height: 60%;
+            width: 76%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button id="hover" class="btn">hover me</button>
+    </div>
+    <div name="special div">
+        <button id="changeHere" class="btn">see the effect here</button>
+    </div>
+
+    <script>
+        const hover = document.getElementById("hover");
+        const changeHere = document.getElementById("changeHere");
+
+        hover.addEventListener("mouseenter", e => {
+            e.preventDefault();
+            changeHere.classList.add("effect");
+        })
+
+        hover.addEventListener("mouseleave", e => {
+            e.preventDefault();
+            changeHere.classList.remove("effect");
+        })
+    </script>
+</body>
+
+</html>

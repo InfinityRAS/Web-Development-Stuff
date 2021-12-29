@@ -1,0 +1,136 @@
+<html>
+
+<head>
+    <title>Windows 10 grid hover effect</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap");
+
+        * {
+            box-sizing: border-box;
+            color: white;
+            font-family: "Noto Sans JP", sans-serif;
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .win-grid {
+            border: 1px solid white;
+            letter-spacing: 2px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            align-items: stretch;
+            text-align: center;
+            grid-gap: 1rem;
+            padding: 5rem;
+        }
+
+        .win-btn {
+            padding: 1rem 2rem;
+            text-align: center;
+            border: none;
+            border-radius: 0px;
+            border: 1px solid transparent;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Windows 10 Button & Grid Hover Effect</h1>
+    <div class="win-grid">
+        <div class="win-btn" id="1">This is a windows hoverable item inside windows grid</div>
+        <div class="win-btn" id="2">This is a windows hoverable item inside windows grid</div>
+        <div class="win-btn" id="3">This is a windows hoverable item inside windows grid</div>
+        <div class="win-btn" id="4">This is a windows hoverable item inside windows grid</div>
+        <div class="win-btn" id="5">This is a windows hoverable item inside windows grid</div>
+        <div class="win-btn" id="6">This is a windows hoverable item inside windows grid</div>
+        <div class="win-btn" id="7">This is a windows hoverable item inside windows grid</div>
+        <div class="win-btn" id="8">This is a windows hoverable item inside windows grid</div>
+        <div class="win-btn" id="9">This is a windows hoverable item inside windows grid</div>
+    </div>
+
+    <script>
+        const offset = 69;
+        const angles = []; //in deg
+        for (let i = 0; i <= 360; i += 45) {
+            angles.push((i * Math.PI) / 180);
+        }
+        let nearBy = [];
+
+        function clearNearBy() {
+            nearBy.splice(0, nearBy.length).forEach((e) => (e.style.borderImage = null));
+        }
+
+        /*Effect #1 - https://codepen.io/struct_dhancha/pen/QWdqMLZ*/
+        document.querySelectorAll(".win-btn").forEach((b) => {
+
+            b.onmouseleave = (e) => {
+                e.target.style.background = "black";
+                e.target.style.borderImage = null;
+                e.target.border = "1px solid transparent";
+            };
+
+            b.onmouseenter = (e) => {
+                clearNearBy();
+            };
+
+            b.addEventListener("mousemove", (e) => {
+                e.target.border = "1px solid transparent";
+                const rect = e.target.getBoundingClientRect();
+                const x = e.clientX - rect.left; //x position within the element.
+                const y = e.clientY - rect.top; //y position within the element.
+                e.target.style.background = `radial-gradient(circle at ${x}px ${y}px , rgba(255,255,255,0.25),rgba(255,255,255,0) )`;
+                e.target.style.borderImage = `radial-gradient(20% 65% at ${x}px ${y}px ,rgba(255,255,255,0.7),rgba(255,255,255,0.7),rgba(255,255,255,0.1) ) 9 / 2px / 0px stretch `;
+            });
+        });
+
+        const body = document.querySelector(".win-grid");
+
+        body.addEventListener("mousemove", (e) => {
+
+            const x = e.x; //x position within the element.
+            const y = e.y; //y position within the element.
+
+            clearNearBy();
+            nearBy = angles.reduce((acc, rad, i, arr) => {
+                const cx = Math.floor(x + Math.cos(rad) * offset);
+                const cy = Math.floor(y + Math.sin(rad) * offset);
+                const element = document.elementFromPoint(cx, cy);
+
+                if (element !== null) {
+
+                    if (
+                        element.className === "win-btn" &&
+                        acc.findIndex((ae) => ae.id === element.id) < 0
+                    ) {
+                        const brect = element.getBoundingClientRect();
+                        const bx = x - brect.left; //x position within the element.
+                        const by = y - brect.top; //y position within the element.
+                        if (!element.style.borderImage)
+                            element.style.borderImage = `radial-gradient(${offset * 2}px ${offset * 2
+                                }px at ${bx}px ${by}px ,rgba(255,255,255,0.7),rgba(255,255,255,0.1),transparent ) 9 / 1px / 0px stretch `;
+                        return [...acc, element];
+                    }
+                }
+                return acc;
+            }, []);
+        });
+
+        body.onmouseleave = (e) => {
+            clearNearBy();
+        };
+
+    </script>
+
+</body>
+
+</html>
