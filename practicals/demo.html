@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>demo js classes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #ecf0f1 !important;
+        }
+
+        .txt,
+        .inp {
+            padding: 8px 12px;
+            margin: 10px auto;
+            width: 85vw;
+            text-align: center;
+            font-size: 25px;
+            font-family: fantasy;
+            box-shadow: 0px 0px 100px #00000078;
+            color: red;
+            outline: none;
+            border: none;
+            display: block;
+        }
+
+        #btn {
+            padding: 8px 12px;
+            margin: 10px auto;
+            /* width: 85vw; */
+            text-align: center;
+            font-size: 25px;
+            font-family: fantasy;
+            box-shadow: 0px 0px 100px #00000078;
+            color: #0fc30fab;
+            outline: none;
+            border: none;
+            display: block;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+        }
+
+        #btn:hover {
+            box-shadow: 0px 0px 65px #00000078;
+            /* filter: invert(1) */
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 88px;
+            font-family: fantasy;
+            margin: 10px 0px;
+            color: turquoise;
+        }
+
+        .txt {
+            color: #2113ff7a;
+        }
+
+        .txtError {
+            padding: 8px 12px;
+            margin: 10px auto;
+            width: 85vw;
+            text-align: center;
+            font-size: 25px;
+            font-family: fantasy;
+            box-shadow: 0px 0px 100px #00000078;
+            color: #056054;
+            background-color: #7fffd45e;
+            outline: none;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading">Add Books</h1>
+    <div class="form">
+        <input type="number" class="inp" id="id" placeholder="Enter the unique ID of book">
+        <input type="text" class="inp" id="name" placeholder="Enter the name of the book">
+        <input type="date" class="inp" id="dateOfIssue" placeholder="Enter the date on which the book was issued">
+        <button id="btn">Submit</button>
+    </div>
+    <div class="error"></div>
+    <div class="container">
+        <div class="txt">ID of the book: 0, The name of the book is: Sapiens, Date on which the book was issued: today
+        </div>
+    </div>
+
+    <script>
+        console.log("Hello world~")
+
+        // classes
+        class Book {
+            constructor(bookName, bookId, dateOfIssue) {
+                // console.log(this)
+                this.name = bookName;
+                this.id = parseInt(bookId);
+                this.dateOfIssue = dateOfIssue;
+            }
+
+            getDetails() {
+                let obj = {
+                    "name of book": this.name,
+                    "Id of book": this.id,
+                    "Date of issue": this.dateOfIssue
+                };
+                return obj;
+            }
+
+            add() {
+                const txt = document.getElementsByClassName("container")[0];
+                const uiString = `
+            <div class="txt">ID of the book: ${this.id}, The name of the book is: ${this.name}, Date on which the book was issued: ${this.dateOfIssue}</div>
+        `
+                txt.innerHTML += uiString
+            }
+        }
+
+        function error(error) {
+            const txt = document.getElementsByClassName("error")[0];
+            const uiString = `
+            <div class="txtError"><span style="color: #ff00006e;">Error: </span>${error}</div>
+            `
+            txt.innerHTML += uiString
+
+            setTimeout(() => {
+                txt.innerHTML = "";
+            }, 3000);
+        }
+
+        // console.log(this)
+
+        // const bo1 = new Book("HP04", 4, "26/12/2022");
+        // bo1.add()
+        // console.log(bo1.id, bo1.name, bo1.dateOfIssue)
+
+
+        const submit = () => {
+            const book_name = document.getElementById("name").value
+            const book_id = document.getElementById("id").value
+            const book_dateOfIssue = document.getElementById("dateOfIssue").value
+
+            if (!book_name || !book_id || !book_dateOfIssue) {
+                error("All fields are required")
+            } else {
+                const book = new Book(book_name, book_id, book_dateOfIssue)
+                book.add()
+            }
+        }
+        const btn = document.getElementById("btn")
+        btn.addEventListener("click", submit)
+    </script>
+</body>
+
+</html>

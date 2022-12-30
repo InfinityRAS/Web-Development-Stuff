@@ -1,0 +1,9 @@
+{
+  "name": "httpTut",
+  "version": "1.0.0",
+  "description": "this is a ass",
+  "main": "app.js",
+  "author": "God conqueror",
+  "license": "MIT",
+  "private": null
+}
