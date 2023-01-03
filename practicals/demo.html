@@ -31,9 +31,10 @@
             display: block;
         }
 
-        #btn {
+        #btn,
+        .btn {
             padding: 8px 12px;
-            margin: 10px auto;
+            margin: 10px;
             /* width: 85vw; */
             text-align: center;
             font-size: 25px;
@@ -42,12 +43,13 @@
             color: #0fc30fab;
             outline: none;
             border: none;
-            display: block;
+            display: inline-block;
             cursor: pointer;
             transition: all 0.5s ease-in-out;
         }
 
-        #btn:hover {
+        #btn:hover,
+        .btn:hover {
             box-shadow: 0px 0px 65px #00000078;
             /* filter: invert(1) */
         }
@@ -78,25 +80,34 @@
             border: none;
             display: block;
         }
+
+        .buttons {
+            width: fit-content;
+            margin: auto;
+        }
     </style>
 </head>
 
 <body>
     <h1 class="heading">Add Books</h1>
     <div class="form">
-        <input type="number" class="inp" id="id" placeholder="Enter the unique ID of book">
+        <input type="number" class="inp" id="id"
+            placeholder="Enter the ID, it should be unique to avoid any overwriting">
         <input type="text" class="inp" id="name" placeholder="Enter the name of the book">
         <input type="date" class="inp" id="dateOfIssue" placeholder="Enter the date on which the book was issued">
-        <button id="btn">Submit</button>
+        <div class="buttons">
+            <button id="btn" class="btn">Submit</button>
+            <button id="btn_reset" class="btn">Reset</button>
+        </div>
     </div>
     <div class="error"></div>
     <div class="container">
-        <div class="txt">ID of the book: 0, The name of the book is: Sapiens, Date on which the book was issued: today
-        </div>
+        <div class="text"></div>
     </div>
 
     <script>
         console.log("Hello world~")
+        getBooks()
 
         // classes
         class Book {
@@ -109,32 +120,58 @@
 
             getDetails() {
                 let obj = {
-                    "name of book": this.name,
-                    "Id of book": this.id,
-                    "Date of issue": this.dateOfIssue
+                    "id": this.id,
+                    "name": this.name,
+                    "dateOfIssue": this.dateOfIssue
                 };
                 return obj;
             }
 
             add() {
-                const txt = document.getElementsByClassName("container")[0];
-                const uiString = `
-            <div class="txt">ID of the book: ${this.id}, The name of the book is: ${this.name}, Date on which the book was issued: ${this.dateOfIssue}</div>
-        `
-                txt.innerHTML += uiString
+                this.save()
+                // this.displayBook()
+                displayBook_standAlone(this.getDetails())
+            }
+
+            save() {
+                localStorage.setItem(this.id, JSON.stringify(this.getDetails()))
+                display("", "Successfully saved!")
             }
         }
 
-        function error(error) {
+        function displayBook_standAlone(obj) {
+            const txt = document.getElementsByClassName("container")[0];
+            const uiString = `
+                    <div class="txt">ID of the book: ${obj.id}, The name of the book is: ${obj.name}, Date on which the book was issued: ${obj.dateOfIssue}</div>
+                `
+            txt.innerHTML += uiString
+        }
+
+        function display(heading, text) {
             const txt = document.getElementsByClassName("error")[0];
             const uiString = `
-            <div class="txtError"><span style="color: #ff00006e;">Error: </span>${error}</div>
+            <div class="txtError"><span style="color: #ff00006e;">${heading}: </span>${text}</div>
             `
             txt.innerHTML += uiString
 
             setTimeout(() => {
                 txt.innerHTML = "";
             }, 3000);
+        }
+
+        function getBooks() {
+            const books = { ...localStorage }
+            console.log(typeof books, books)
+            // console.log(Array.from(JSON.stringify(books)))
+
+            // document.getElementsByClassName("text")[0].innerHTML = ""
+            for (const key in books) {
+                const book = books[key]
+                // console.log(book)
+                // console.log(JSON.parse(book), typeof book)
+                const obj = JSON.parse(book)
+                displayBook_standAlone(obj)
+            }
         }
 
         // console.log(this)
@@ -150,14 +187,24 @@
             const book_dateOfIssue = document.getElementById("dateOfIssue").value
 
             if (!book_name || !book_id || !book_dateOfIssue) {
-                error("All fields are required")
+                display("Error", "All fields are required")
             } else {
                 const book = new Book(book_name, book_id, book_dateOfIssue)
                 book.add()
             }
         }
+
+        const reset = () => {
+            document.getElementById("name").value = ""
+            document.getElementById("id").value = ""
+            document.getElementById("dateOfIssue").value = ""
+        }
+
         const btn = document.getElementById("btn")
         btn.addEventListener("click", submit)
+
+        const btn_reset = document.getElementById("btn_reset")
+        btn_reset.addEventListener("click", reset)
     </script>
 </body>
 
