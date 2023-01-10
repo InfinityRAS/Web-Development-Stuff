@@ -5,5 +5,5 @@
   "main": "app.js",
   "author": "God conqueror",
   "license": "MIT",
-  "private": null
+  "private": false
 }

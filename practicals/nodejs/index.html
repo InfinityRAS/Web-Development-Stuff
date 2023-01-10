@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API tut</title>
+    <style>
+        .table * {
+            border: 2px solid red;
+            padding: 5px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="btn">Fetch data</button>
+    <div class="container">
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Account Type</th>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        const btn = document.getElementById("btn")
+        btn.addEventListener("click", async () => {
+            console.log("fired")
+            const res = await fetch("http://localhost/getData", {
+                method: "get",
+                headers: { "Content-type": "application/json;charset=UTF-8", "Access-Control-Allow-Origin": "*" }
+            })
+            const data = await res.json()
+
+            function getData() {
+                const dataString = data.map(e => {
+                    return `
+                            <tr>
+                                <td>${e.id}</td>
+                                <td>${e.name}</td>
+                                <td>${e.accType}</td>
+                            </tr>
+                            `
+                })
+                return dataString;
+            }
+
+            const container = document.getElementsByClassName("table")[0]
+            container.innerHTML += getData()
+
+            console.log(data)
+        })
+    </script>
+</body>
+
+</html>

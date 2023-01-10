@@ -1,0 +1,17 @@
+[
+    {
+      "id": 1,
+      "name": "Aryan",
+      "accType": "premium"
+    },
+    {
+      "id": 2,
+      "name": "Adithya",
+      "accType": "normal"
+    },
+    {
+      "id": 3,
+      "name": "infinity",
+      "accType": "super_premium"
+    }
+  ]
