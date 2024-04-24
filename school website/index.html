@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School website</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #ecf0f1 !important;
+        }
+
+        /* Navigation bar styles */
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 3px;
+            box-shadow: 0px 0px 105px rgb(0, 0, 0, 47%);
+        }
+
+        .navbar {
+            /* padding: 15px; */
+            margin-bottom: 10px;
+            position: sticky;
+            z-index: 1000;
+            font-family: system-ui;
+        }
+
+        .container-fluid {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .items {
+            margin: 0 20px;
+            cursor: pointer;
+            color: rgb(97 102 102);
+            transition: all 250ms ease-in-out;
+            text-decoration: none;
+        }
+
+        .items:hover {
+            color: rgba(78, 88, 88, 0.51);
+        }
+
+        .items:active {
+            color: rgb(61, 73, 73);
+        }
+
+        .logo {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #logo {
+            height: 50px;
+        }
+
+        #search {
+            outline: none;
+            cursor: pointer;
+            padding: 3px;
+            border: 1px solid rgba(78, 88, 88, 0.51);
+            background: none;
+            border-radius: 4px;
+        }
+
+        /* main head styles */
+        .main-head {
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 0px 105px rgb(0, 0, 0, 47%);
+            justify-content: center;
+        }
+
+        #main-img {
+            border-radius: 11px;
+        }
+
+        /* .main-img::after {
+            content: "";
+            background-color: black;
+            background-image: url('reception.png');
+            opacity: 50%;
+        } */
+
+        /* footer styles */
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo"><img src="logo.png" alt="Logo" id="logo"></div>
+            <div class="container-fluid">
+                <div class="items" id="item-1">Home</div>
+                <div class="items" id="item-2">Admissions</div>
+                <div class="items" id="item-3">About Us</div>
+                <div class="items" id="item-4">Contact Us</div>
+            </div>
+            <div class="items"><input type="text" placeholder="Search!" id="search"></div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="headingTxt">Welcome to Ashok Memorial Public School</div>
+        <div class="main-head">
+            <div class="main-img">
+                <img src="reception.png" alt="image" id="main-img">
+            </div>
+            
+            <div class="main-content">
+                <p>A student guided approach to Education</p>   
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <p>Copyrights, All rights reserved, Ashok Memorial Public School, 2024</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

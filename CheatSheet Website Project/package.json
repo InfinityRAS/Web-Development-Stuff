@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "pug": "^3.0.0"
+    "path-to-regexp": "^6.2.1",
+    "pug": "^3.0.0",
+    "safer-buffer": "^2.1.2"
   }
 }
