@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website</title>
+    <title>Infinity Buys - Best E-commerce site</title>
     <style>
         * {
             padding: 0;
             margin: 0;
+            scroll-behavior: smooth;
         }
 
         /* nav bar styles */
@@ -25,7 +26,7 @@
             top: 0;
             left: 0;
             width: 100vw;
-            height: 85vh;
+            /* height: 85vh; */
             background-color: black;
             opacity: 95%;
         }
@@ -35,7 +36,10 @@
             justify-content: space-around;
             color: white;
             align-items: center;
-            margin-top: 5px;
+            /* margin-top: 5px; */
+            padding: 20px 0px;
+            width: 100vw;
+            position: fixed;
         }
 
         .items-div {
@@ -55,6 +59,7 @@
         #items-item1 {
             font-family: sans-serif;
             font-size: 25px;
+            font-weight: bold;
         }
 
         .items-div-items:hover {
@@ -75,7 +80,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 75vh;
+            height: 100vh;
             flex-direction: column;
         }
 
@@ -103,11 +108,12 @@
         }
 
         #box2 {
-            background: #151599ab;
+            background: #a7989852;
         }
 
         .text {
             font-size: 44px;
+            margin: 20px 0;
             font-family: fantasy;
         }
 
@@ -117,27 +123,51 @@
             margin: 10px 0;
         }
 
+        #item5 {
+            background: white;
+            color: black;
+            padding: 5px 8px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        #item5:hover {
+            background: #ffffff9c;
+        }
+
+        #item5:active {
+            background: #ffffff;
+        }
+
+        .search {
+            outline: none;
+            cursor: pointer;
+            background: none;
+            border: 1px solid white;
+            padding: 7px 10px;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+        }
+
         /* footer styles */
 
         footer {
             font-family: monospace;
             font-size: 16px;
-            background: #cfe5ed;
-            /* color: black; */
-            padding: 0 10px;
-            height: 15vh;
-            position: absolute;
-            left: 0;
-            width: 98.5vw;
-            bottom: 0;
+            padding: 10px;
         }
 
         .footer-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
             height: inherit;
-            flex-direction: column;
+            border-radius: 8px;
+            background: rgb(70 68 65 / 41%);
+            color: white;
+            box-shadow: 0 0 30px 0 #413f3d;
+            padding: 10px;
         }
 
         .footer-img {
@@ -164,27 +194,29 @@
 
         <div class="nav-items">
             <div class="items" id="item1">
-                <div class="items-item" id="items-item1">Ashok Memorial Public School</div>
-                <div class="items-item" id="items-item2">Service to Humanity</div>
+                <div class="items-item" id="items-item1">Infinity Buys</div>
+                <div class="items-item" id="items-item2">Together, We make Life Better</div>
             </div>
             <div class="items-div">
-
-                <div class="items items-div-items" id="item2">Admissions</div>
-                <div class="items items-div-items" id="item3">About Us</div>
-                <div class="items items-div-items" id="item4">Contact Us</div>
+                <div class="items items-div-items" id="item1">About Us</div>
+                <div class="items items-div-items" id="item2">Contact Us</div>
+                <div class="items items-div-items" id="item3">Login</div>
+                <div class="items items-div-items" id="item4">Sign Up</div>
+                <div class="items items-div-items" id="item5">Explore</div>
             </div>
+            <div class="seach-bar"><input type="text" placeholder="Search" class="search"></div>
         </div>
     </nav>
 
     <main>
         <div class="container">
-            <div class="text">A Student Centered approach to Education</div>
+            <div class="text">Relax, It's Infinity Buys!</div>
             <div class="boxes">
 
-                <div class="box" id="box1">Enhanced facilities! <img src="facilities.jpg" alt="facilites"
-                        class="images"></div>
-                <div class="box" id="box2">Best faculties with optimum experience! <img src="teacher.jpg"
-                        alt="facilites" class="images"></div>
+                <div class="box" id="box1">Best Products with optimum quality <img src="img1.jpg" alt="" class="images">
+                </div>
+                <div class="box" id="box2">Best Services, Best customer care<img src="img2.avif" alt="" class="images">
+                </div>
             </div>
         </div>
     </main>
@@ -193,7 +225,7 @@
         <div class="footer-container">
             <div>Copyrights &copy; All rights reserved</div>
             <div>
-                Ashok Memorial Public School, 2024</div>
+                Infinity Buys, 2024</div>
             <a href="#">Back to top</a>
         </div>
     </footer>

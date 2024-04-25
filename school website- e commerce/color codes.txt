@@ -1,0 +1,13 @@
+color: rgb(255 255 255 / 68%);  # navbar items hover color
+color: rgb(61, 73, 73);     # navbar items active color
+        
+box-shadow: 0px 15px 30px 20px #00000082; # boxes shadow
+
+background: #a798989c; # box1 bg (common bg)
+background: #a7989852; # box2 bg
+
+background: #ffffff9c;      # explore btn hover bg
+background: #ffffff;        # explore btn active bg
+
+background: rgb(70 68 65 / 41%);        # footer bg
+box-shadow: 0 0 30px 0 #413f3d;     # footer shadow
